@@ -14,6 +14,19 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Todo App',
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.transparent,
+          iconTheme: IconThemeData(
+            color: Colors.black
+          ),
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+          )
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: MyHomePage(),

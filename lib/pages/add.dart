@@ -11,7 +11,6 @@ class AddTodo extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add Todo'),
-        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Column(
