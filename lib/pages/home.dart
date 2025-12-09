@@ -45,10 +45,12 @@ class MyHomePage extends ConsumerWidget {
               }
             }
             return Slidable(
+                key: ValueKey(todos[index].todoId.toString()),
               startActionPane: ActionPane(
                 motion: const ScrollMotion(),
                 children: [
                   SlidableAction(
+                      key: ValueKey("${todos[index].todoId}delete"),
                     onPressed: (context) => ref.read(todoProvider.notifier).deleteTodo(activeTodos[index].todoId),
                     icon: Icons.delete,
                     backgroundColor: Colors.red,

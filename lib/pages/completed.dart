@@ -22,10 +22,12 @@ class CompletedTodos extends ConsumerWidget {
             itemCount: completedTodos.length,
             itemBuilder: (context, index) {
               return Slidable(
+
                   startActionPane: ActionPane(
                       motion: const ScrollMotion(),
                       children: [
                         SlidableAction(
+
                             onPressed: (context) => ref.read(todoProvider.notifier).deleteTodo(completedTodos[index].todoId),
                             icon: Icons.delete,
                             backgroundColor: Colors.red,
